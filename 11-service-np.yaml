@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-mp
+  labels:
+    purpose: service-np
+spec:
+  type: NodePort
+  selector:
+    purpose: service-np-demo
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-np
+  labels:
+    purpose: service-np-demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx
