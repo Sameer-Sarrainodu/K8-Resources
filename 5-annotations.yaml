@@ -3,14 +3,14 @@ kind: Pod
 
 metadata:
  name: annotations
- label:
+ labels:
   project: robobshop
   environment: dev
  
-annotations:
-  description: hi i am annotation i can handle big text
-  project: this is project executed in kubernetes
-  dockerhub: https://dockerhub.io
+  annotations:
+    description: hi i am annotation i can handle big text
+    project: this is project executed in kubernetes
+    dockerhub: https://dockerhub.io
 
 
 spec:
