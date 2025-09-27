@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-lb
+  labels:
+    purpose: service-lb-demo
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: service-lbs
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-lb
+  labels:
+    purpose: service-lbs
+spec:
+  containers:
+  - name: nginx
+    image: nginx
