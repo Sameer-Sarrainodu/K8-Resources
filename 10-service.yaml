@@ -7,7 +7,6 @@ metadata:
 spec:
   selector:
     environment: dev
-    name: sameer
   ports:
   - protocol: TCP
     port: 80 # service port
@@ -20,7 +19,6 @@ metadata:
   name: nginx
   labels:
     environment: dev
-    name: sameer
 
 spec:
   containers:
