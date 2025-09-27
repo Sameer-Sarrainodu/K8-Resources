@@ -20,6 +20,7 @@ metadata:
   name: nginx
   labels:
     environment: dev
+    name: sameer
 
 spec:
   containers:
