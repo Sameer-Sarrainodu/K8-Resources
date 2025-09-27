@@ -12,7 +12,7 @@ data:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: env-configMap
+  name: env-configmap
 spec:
   containers:
   - name: nginx
