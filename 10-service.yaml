@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: svr
   labels:
     purpose: service-demo
 spec:
