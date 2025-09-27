@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envar-demo
+  labels:
+    purpose: demo-env
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: age
+      value: 25 
+    - name: mobile
+      value: "9703123213"
+
+
