@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  lables:
+    purpose: service-demo
+spec:
+  selector:
+    environment: dev
+    name: sameer
+  ports:
+  - protocol: TCP
+    port: 80 # service port
+    targetport: 80 # container port
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    environment: dev
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
