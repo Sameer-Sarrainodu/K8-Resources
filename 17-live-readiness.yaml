@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-http
+  labels:
+    test: liveness
+spec:
+  containers:
+    - name: nginx-liveandreadliness
+      image: nginx
+      livenessProbe:
+        tcpsocket:
+          port: 80
+        initialDelaySeconds: 50
+        periodSeconds: 10
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 40
+        periodSeconds: 3
