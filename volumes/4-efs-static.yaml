@@ -12,7 +12,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0f3d3eb56374474b6
+    volumeHandle: fs-02cc1e81aee27b834
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
