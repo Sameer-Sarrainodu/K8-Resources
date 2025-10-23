@@ -9,7 +9,7 @@ spec:
     - name: nginx-liveandreadliness
       image: nginx
       livenessProbe:
-        tcpsocket:
+        tcpSocket:
           port: 80
         initialDelaySeconds: 50
         periodSeconds: 10
