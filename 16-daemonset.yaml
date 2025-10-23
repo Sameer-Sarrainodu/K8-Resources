@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       name: roboshop
-  templates:
+  template:  # <-- changed from 'templates' to 'template'
     metadata:
       labels:
         name: roboshop
